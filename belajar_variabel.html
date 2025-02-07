@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <string>
-        var title = "Belajar pemrograman javascript";
-        var SiteName = "rahmad";
-        var url = "rahmad848.wordpress.com";
-    </string>
+    <title>Percabangan if dalam Tabel</title>
+
+    <title>HASIL UJIAN AKHIR TAHUN</title>
+
+    <style>
+       head {
+       widht: 50%;
+       margin: 20px auto;
+       border-collapse: collapse;
+       }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #17dceb;
+        }
+        th {
+            background-color: #18ee10;
+        }
+    </style>
+</head>
+<body>
+    <h1>HASIL UJIAN AKHIR TAHUN</h1>
+   
+    <script>
+        var nilaihasil = prompt("nilai hasil?", 0);
+        
+        var grade = '';  // Deklarasi grade
+        var keterangan = '';  // Deklarasi keterangan
+
+        if(nilaihasil >= 90) {
+            grade = 'A+';
+            keterangan = 'SANGAT BAGUS';
+        } else if(nilaihasil >= 80) {
+            grade = 'A';
+            keterangan = 'BAGUS';
+        } else if(nilaihasil >= 70) {
+            grade = 'B';
+            keterangan = 'CUKUP BAGUS';
+        } else if(nilaihasil >= 65) {
+            grade = 'C';
+            keterangan = 'BAGUS';
+        } else if(nilaihasil >= 50) {
+            grade = 'D';
+            keterangan = 'CUKUP';
+        } else {
+            grade = 'E';
+            keterangan = 'TIDAK LULUS';
+        }
+
+        document.write(`
+            <table>
+                <tr>
+                    <th>Nilai</th>
+                    <th>Grade</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>${nilaihasil}</td>
+                    <td>${grade}</td>
+                    <td>${keterangan}</td>
+                </tr>
+            </table>
+        `);
+    </script>
+</body>
 </html>
-</head>    
