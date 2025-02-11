@@ -22,13 +22,19 @@
 
 
 var products = ["mobil" , "motor", "kereta", "becak", "sepeda"];
+//menambahkan array
  products.push("pesawat" , "heli kopter");
+ //menghapus data dari depan
  products.shift();
+ //menghapus data dari belakang
  products.pop();
+ //menghapus data sesuai index
  products.splice(4);
-
+//menampilkan data sesuai index
  var barang = products[2];
- products[3] = "sabun";
+ //menukar data dengan index
+ //products[3] = "sabun";
+ //menampilkan data
  document.write("<h1>daftar kendaraan:</h1>");
  document.write("<ol>");
 
@@ -36,7 +42,7 @@ var products = ["mobil" , "motor", "kereta", "becak", "sepeda"];
       document.write(`<li>${ products[i] }</li>`);
     }
  document.write("</ol>");
- document.write(barang);
+ //document.write(barang);
 
 
  //var results = ''
@@ -105,8 +111,23 @@ var products = ["mobil" , "motor", "kereta", "becak", "sepeda"];
 //console.log(adaQ);
 
 
+//fungsi dengan parameter
+//function kali(a, b){
+  //hasilKali = a * b;
+  //document.write("Hasil kali a*b = " + hasilKali);
+  //console.log("Hasil kali a*b = " + hasilKali);
 
-function namaFungsi(){
-    document.write("Hello World!");
-    }
-    sayHellow()
+//}
+  //kali(3, 2);
+//fungsi yang mengembalikan nilai
+  function bagi(a,b){
+    hasilBagi = a / b;
+    return hasilBagi;
+}
+
+// memanggil fungsi
+var nilai_a = 20;
+var nilai_b = 5;
+var hasilPembagian = bagi(nilai_a , nilai_b);
+
+document.write(hasilPembagian); 
